@@ -11,6 +11,8 @@
   <a href="">![last commit](https://img.shields.io/github/last-commit/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention)</a>
   <a href="">![repo size](https://img.shields.io/github/repo-size/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention)</a>
   <a href="">![watchers](https://img.shields.io/github/watchers/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention?style=social)</a>
+  <br>
+  <a href="">![personal](https://img.shields.io/badge/project-chandlertimmdoloriel-red)</a>
 
 </div>
 
