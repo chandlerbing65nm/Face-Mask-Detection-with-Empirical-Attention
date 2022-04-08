@@ -73,7 +73,9 @@ The different hash functions are:
 I then splitted the data into train and test sets with split ratio of 0.2 for test. After that, I converted the dataset annotations to ```COCO format``` since this format is most commonly used on object detection libraries like ```MMDetection```.
 
 <p align="left">
-  <img 
+  <img
+    width= 700
+    height= 150
     src="https://user-images.githubusercontent.com/62779617/162487132-b19b87fb-61f7-42be-a56f-98fccdbd1617.png"
   >
 </p>
