@@ -34,6 +34,8 @@
   >
 </p>
 
+---
+
 # About the Project
 
 
