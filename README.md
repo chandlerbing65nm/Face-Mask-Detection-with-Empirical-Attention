@@ -26,7 +26,13 @@
 
 <h4 align="center">Raw Video: <a href="https://youtu.be/8J9iFWhZdsY" target="_blank">20 Types of People in Face Masks</a>.</h4>
 
-![mapping](https://github.com/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention/blob/main/Demo/mapping.png?raw=true)
+<p align="center">
+  <img 
+    width="750"
+    height="200"
+    src="https://github.com/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention/blob/main/Demo/mapping.png?raw=true"
+  >
+</p>
 
 # About the Project
 
