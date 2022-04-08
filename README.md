@@ -1,7 +1,5 @@
 <p align="center">
   <img 
-    width="950"
-    height="150"
     src="https://github.com/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention/blob/main/Repo_Files/Face_Mask_Detection_with__n__Empirical_Attention.png?raw=true"
   >
 </p>
@@ -18,8 +16,6 @@
 
 <p align="center">
   <img 
-    width="500"
-    height="300"
     src="https://github.com/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention/blob/main/Demo/ezgif.com-gif-maker.gif?raw=true"
   >
 </p>
@@ -28,8 +24,6 @@
 
 <p align="center">
   <img 
-    width="750"
-    height="200"
     src="https://github.com/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention/blob/main/Demo/mapping.png?raw=true"
   >
 </p>
@@ -50,6 +44,16 @@ The classes are:
 - With mask;
 - Without mask;
 - Mask worn incorrectly.
+
+I plot the distribution of the dataset classes as shown below. We can see that class ```with mask``` dominate majority of the data. 
+
+<p align="center">
+  <img 
+    src="https://github.com/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention/blob/main/Repo_Files/distri.jpg?raw=true"
+  >
+</p>
+
+The data is skewed, so I investigated more and find if there are duplicate images. If I can find the duplicate images, I can atleast lessen the effect of overfitting or underfitting.
 
 ## Model
 
