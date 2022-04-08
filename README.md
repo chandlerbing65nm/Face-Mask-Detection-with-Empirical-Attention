@@ -47,13 +47,30 @@ The classes are:
 
 I plot the distribution of the dataset classes as shown below. We can see that class ```with mask``` dominate majority of the data. 
 
-<p align="center">
+<p align="left">
   <img 
     src="https://github.com/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention/blob/main/Repo_Files/distri.jpg?raw=true"
   >
 </p>
 
-The data is skewed, so I investigated more and find if there are duplicate images. If I can find the duplicate images, I can atleast lessen the effect of overfitting or underfitting.
+The data is skewed, so I investigated more and find if there are duplicate images. If I can find the duplicate images, I can atleast lessen the effect of overfitting or underfitting. 
+
+Using the ```imagehash``` method, we found 23 duplicate images! an example is shown below.
+
+<p align="left">
+  <img 
+    src="https://user-images.githubusercontent.com/62779617/162480687-6e9d8f3d-3bd4-4726-b709-62552808fed8.png"
+  >
+</p>
+
+We then split the data into train and test sets with split ratio of 0.2 for test. After that, we converted the dataset annotations to ```COCO format``` since this format is most commonly used on object detection libraries like ```MMDetection```.
+
+<p align="left">
+  <img 
+    src="https://user-images.githubusercontent.com/62779617/162481317-d6b032e2-6600-4f04-a22a-c89106b123e1.png"
+  >
+</p>
+
 
 ## Model
 
