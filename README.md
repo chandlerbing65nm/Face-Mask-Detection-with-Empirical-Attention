@@ -36,7 +36,7 @@
 Masks play a crucial role in protecting the health of individuals against respiratory diseases, as is one of the few precautions available for COVID-19 in the absence of immunization. In this project, I designed a Face Mask detector to identify humans that are wearing, not wearing, or improperly wearing masks during the COVID19 pandemic. During the pandemic, it is empirical to wear masks all the time when outside your house to minimize the transmission of the deadly disease. 
 
 ## Dataset
-To realize our goal, we use the kaggle dataset [Face Mask Detection](https://www.kaggle.com/datasets/andrewmvd/face-mask-detection?datasetId=667889&sortBy=voteCount). With this dataset, it is possible to create a model to detect people wearing masks, not wearing them, or wearing masks improperly.
+To realize our goal, I use the kaggle dataset [Face Mask Detection](https://www.kaggle.com/datasets/andrewmvd/face-mask-detection?datasetId=667889&sortBy=voteCount). With this dataset, it is possible to create a model to detect people wearing masks, not wearing them, or wearing masks improperly.
 
 This dataset contains 853 images belonging to the 3 classes, as well as their bounding boxes in the PASCAL VOC format.
 The classes are:
@@ -45,7 +45,7 @@ The classes are:
 - Without mask;
 - Mask worn incorrectly.
 
-I plot the distribution of the dataset classes as shown below. We can see that class ```with mask``` dominate majority of the data. 
+I plot the distribution of the dataset classes as shown below. I can see that class ```with mask``` dominate majority of the data. 
 
 <p align="left">
   <img 
@@ -55,7 +55,7 @@ I plot the distribution of the dataset classes as shown below. We can see that c
 
 The data is skewed, so I investigated more and find if there are duplicate images. If I can find the duplicate images, I can atleast lessen the effect of overfitting or underfitting. 
 
-Using the ```imagehash``` method, we found 23 duplicate images! an example is shown below.
+Using the ```imagehash``` method, I found 23 duplicate images! an example is shown below.
 
 <p align="left">
   <img 
@@ -63,7 +63,7 @@ Using the ```imagehash``` method, we found 23 duplicate images! an example is sh
   >
 </p>
 
-We then split the data into train and test sets with split ratio of 0.2 for test. After that, we converted the dataset annotations to ```COCO format``` since this format is most commonly used on object detection libraries like ```MMDetection```.
+I then splitted the data into train and test sets with split ratio of 0.2 for test. After that, I converted the dataset annotations to ```COCO format``` since this format is most commonly used on object detection libraries like ```MMDetection```.
 
 <p align="left">
   <img 
