@@ -55,7 +55,14 @@ I plot the distribution of the dataset classes as shown below. I can see that cl
 
 The data is skewed, so I investigated more and find if there are duplicate images. If I can find the duplicate images, I can atleast lessen the effect of overfitting or underfitting. 
 
-Using the ```imagehash``` method, I found 23 duplicate images! an example is shown below.
+Using the ```imagehash``` method, I found 23 duplicate images! an example is shown below. Basically, what ```imagehash``` do is calculate the hash values of an image and compare it (or find the similarity) with another hash value. There are several hash functions and I used all of them and combined the calculated hash values. 
+
+The different hash functions are:
+
+| average hashing (aHash) | perception hashing (pHash) | difference hashing (dHash) | wavelet hashing (wHash) |
+| ----------------------- | -------------------------- | -------------------------- | ----------------------- |
+
+<br>
 
 <p align="left">
   <img 
