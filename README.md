@@ -39,4 +39,17 @@
 # About the Project
 ![personal](https://img.shields.io/badge/project-chandlertimmdoloriel-red?style=for-the-badge&logo=appveyor)
 
+Masks play a crucial role in protecting the health of individuals against respiratory diseases, as is one of the few precautions available for COVID-19 in the absence of immunization. In this project, I designed a Face Mask detector to identify humans that are wearing, not wearing, or improperly wearing masks during the COVID19 pandemic. During the pandemic, it is empirical to wear masks all the time when outside your house to minimize the transmission of the deadly disease. 
+
+## Dataset
+To realize our goal, we use the kaggle dataset [Face Mask Detection](https://www.kaggle.com/datasets/andrewmvd/face-mask-detection?datasetId=667889&sortBy=voteCount). With this dataset, it is possible to create a model to detect people wearing masks, not wearing them, or wearing masks improperly.
+
+This dataset contains 853 images belonging to the 3 classes, as well as their bounding boxes in the PASCAL VOC format.
+The classes are:
+
+- With mask;
+- Without mask;
+- Mask worn incorrectly.
+
+## Model
 
