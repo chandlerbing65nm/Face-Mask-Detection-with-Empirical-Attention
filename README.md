@@ -72,14 +72,10 @@ The different hash functions are:
 
 I then splitted the data into train and test sets with split ratio of 0.2 for test. After that, I converted the dataset annotations to ```COCO format``` since this format is most commonly used on object detection libraries like ```MMDetection```.
 
-<p align="center">
-  <img
-    width= 700
-    height= 150
-    src="https://user-images.githubusercontent.com/62779617/162487132-b19b87fb-61f7-42be-a56f-98fccdbd1617.png"
-  >
-</p>
-
+```python
+test_ratio = 0.20
+train_img, test_img = np.split(np.array(imgfiles), [int(len(imgfiles)* (1 - test_ratio))])
+```
 
 ## Model
 
@@ -99,13 +95,22 @@ The paper presented an empirical study that ablates various spatial attention el
 
 The training pipeline is shown below. We flip the images randomly by 0.5 ratio and normalize it. The training is done in multi-scale, `img_scale=[(1333, 640), (1333, 800)]` and the `cfg.runner.max_epochs = 12` which is repeated 3x. `cfg.optimizer.lr = 0.02 / 8` and is divided by 10 after every `epoch=8` and `epoch=11` by the `lr_scheduler`.
 
-<p align="center">
-  <img
-    width= 500
-    height= 350
-    src="https://user-images.githubusercontent.com/62779617/162557737-2ec98d63-cf69-4ea4-bddc-7e34ad334308.png"
-  >
-</p>
+
+```python
+cfg.train_pipeline = [
+        dict(type='LoadImageFromFile'),
+        dict(type='LoadAnnotations', with_bbox=True),
+        dict(
+            type='Resize',
+            img_scale=[(1333, 640), (1333, 800)],
+            multiscale_mode='range',
+            keep_ratio=True),
+        dict(type='RandomFlip', flip_ratio=0.5),
+        dict(type='Normalize', **cfg.img_norm_cfg),
+        dict(type='Pad', size_divisor=32),
+        dict(type='DefaultFormatBundle'),
+        dict(type='Collect', keys=['img', 'gt_bboxes', 'gt_labels'])]
+```
 
 After setting-up the model architecture, I started the training process and did an inference with the output. The result is shown below. It obtained an `bbox mAP = 0.608`.
 
