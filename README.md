@@ -107,7 +107,7 @@ The training pipeline is shown below. We flip the images randomly by 0.5 ratio a
   >
 </p>
 
-After setting-up the model architecture, I stareted the training process and did an inference with the output. The result is shown below. It obtained an bbox `mAP = 0.605`.
+After setting-up the model architecture, I stareted the training process and did an inference with the output. The result is shown below. It obtained an bbox `mAP = 0.608`.
 
 <p align="center">
   <img
