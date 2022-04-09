@@ -83,7 +83,7 @@ I then splitted the data into train and test sets with split ratio of 0.2 for te
 
 ## Model
 
-For the implementation of the model, I used the object detection toolbox [MMDetection](https://github.com/open-mmlab/mmdetection) which is based on PyTorch. The toolbox fetures modular design which I can decompose state-of-the-art frameworks into different componenents and can easily construct a customized object detection framework by combining different modules. 
+For the implementation of the model, I used the object detection toolbox [MMDetection](https://github.com/open-mmlab/mmdetection) which is based on PyTorch. The toolbox fetures modular design which can decompose state-of-the-art frameworks into different componenents and can easily construct a customized object detection framework by combining different modules. 
 
 The toolbox directly supports popular and contemporary detection frameworks, e.g. Faster RCNN, Mask RCNN, RetinaNet, etc.
 
@@ -107,7 +107,7 @@ The training pipeline is shown below. We flip the images randomly by 0.5 ratio a
   >
 </p>
 
-After setting-up the model architecture, I stareted the training process and did an inference with the output. The result is shown below. It obtained an bbox `mAP = 0.608`.
+After setting-up the model architecture, I started the training process and did an inference with the output. The result is shown below. It obtained an `bbox mAP = 0.608`.
 
 <p align="center">
   <img
