@@ -47,7 +47,7 @@ The classes are:
 
 I plot the distribution of the dataset classes as shown below. I can see that class ```with mask``` dominate majority of the data. 
 
-<p align="left">
+<p align="center">
   <img 
     src="https://github.com/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention/blob/main/Repo_Files/distri.jpg?raw=true"
   >
@@ -64,7 +64,7 @@ The different hash functions are:
 
 <br>
 
-<p align="left">
+<p align="center">
   <img 
     src="https://user-images.githubusercontent.com/62779617/162480687-6e9d8f3d-3bd4-4726-b709-62552808fed8.png"
   >
@@ -72,7 +72,7 @@ The different hash functions are:
 
 I then splitted the data into train and test sets with split ratio of 0.2 for test. After that, I converted the dataset annotations to ```COCO format``` since this format is most commonly used on object detection libraries like ```MMDetection```.
 
-<p align="left">
+<p align="center">
   <img
     width= 700
     height= 150
@@ -83,3 +83,37 @@ I then splitted the data into train and test sets with split ratio of 0.2 for te
 
 ## Model
 
+For the implementation of the model, I used the object detection toolbox [MMDetection](https://github.com/open-mmlab/mmdetection) which is based on PyTorch. The toolbox fetures modular design which I can decompose state-of-the-art frameworks into different componenents and can easily construct a customized object detection framework by combining different modules. 
+
+The toolbox directly supports popular and contemporary detection frameworks, e.g. Faster RCNN, Mask RCNN, RetinaNet, etc.
+
+<p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/62779617/162557447-dd7a921b-9b6d-4baa-8912-68f47921cfe5.png"
+  >
+</p>
+
+From the toolbox, I use the detector named [empirical attention](https://openaccess.thecvf.com/content_ICCV_2019/papers/Zhu_An_Empirical_Study_of_Spatial_Attention_Mechanisms_in_Deep_Networks_ICCV_2019_paper.pdf) based on this paper published in ICCV.
+
+The paper presented an empirical study that ablates various spatial attention elements within a generalized attention formulation, encompassing the dominant Transformer attention as well as the prevalent deformable convolution and dynamic convolution modules. The study yields significant findings about spatial attention in deep networks, some of which run counter to conventional understanding. The baseline used for empirical attention is the Faster-RCNN with feature pyramid network.
+
+The training pipeline is shown below. We flip the images randomly by 0.5 ratio and normalize it. The training is done in multi-scale, `img_scale=[(1333, 640), (1333, 800)]` and the `cfg.runner.max_epochs = 12` which is repeated 3x. `cfg.optimizer.lr = 0.02 / 8` and is divided by 10 after every `epoch=8` and `epoch=11` by the `lr_scheduler`.
+
+<p align="center">
+  <img
+    width= 500
+    height= 350
+    src="https://user-images.githubusercontent.com/62779617/162557737-2ec98d63-cf69-4ea4-bddc-7e34ad334308.png"
+  >
+</p>
+
+After setting-up the model architecture, I stareted the training process and did an inference with the output. The result is shown below. It obtained an bbox `mAP = 0.605`.
+
+<p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/62779617/162558031-267c5f4c-cff2-4dd9-8782-6088608cc3eb.png"
+  >
+</p>
+
+
+# Usage
