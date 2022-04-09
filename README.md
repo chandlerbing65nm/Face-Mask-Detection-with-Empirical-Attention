@@ -117,3 +117,11 @@ After setting-up the model architecture, I stareted the training process and did
 
 
 # Usage
+
+You don't need to install anything to run the project. The [notebook](https://www.kaggle.com/code/chandlertimm/face-mask-detection-with-empirical-attention?scriptVersionId=90852067) is hosted in `kaggle`. 
+
+If you want to just read the code, click the [notebook](https://www.kaggle.com/code/chandlertimm/face-mask-detection-with-empirical-attention?scriptVersionId=90852067). If you want to try and run it, just click the `Copy & Edit` tab in the upper right corner of the notebook.
+
+# License
+
+This repo is licensed under [MIT License](https://github.com/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention/blob/main/LICENSE)
