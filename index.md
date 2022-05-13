@@ -4,14 +4,6 @@
   >
 </p>
 
-<div align="center">
-
-  <a href="">![last commit](https://img.shields.io/github/last-commit/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention)</a>
-  <a href="">![repo size](https://img.shields.io/github/repo-size/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention)</a>
-  <a href="">![watchers](https://img.shields.io/github/watchers/chandlerbing65nm/Face-Mask-Detection-with-Empirical-Attention?style=social)</a>
-
-</div>
-
 <h4 align="center">Object detection of face masks worn by people during the COVID19 pandemic.</h4>
 
 <p align="center">
