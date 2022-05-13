@@ -54,7 +54,7 @@ The different hash functions are:
 - average hashing (aHash)
 - perception hashing (pHash)
 - difference hashing (dHash)
-- wavelet hashing (wHash) |
+- wavelet hashing (wHash)
 
 <br>
 
