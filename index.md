@@ -51,8 +51,10 @@ Using the ```imagehash``` method, I found 23 duplicate images! an example is sho
 
 The different hash functions are:
 
-| average hashing (aHash) | perception hashing (pHash) | difference hashing (dHash) | wavelet hashing (wHash) |
-| ----------------------- | -------------------------- | -------------------------- | ----------------------- |
+- average hashing (aHash)
+- perception hashing (pHash)
+- difference hashing (dHash)
+- wavelet hashing (wHash) |
 
 <br>
 
